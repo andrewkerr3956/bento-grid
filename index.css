@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf');
+}
+
+* {
+    box-sizing: border-box !important;
+    font-family: 'DM Sans';
+}
+
+html, body {
+    width: 100%;
+    height: 100dvh;
+    margin: unset;
+    padding: unset;
+}
+
+.grid-main  {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background-color: hsl(0, 0%, 100%);
+    padding: 3% 7.5%;
+    grid-template-areas: 
+        "top-left top-center top-center top-right"
+        "top-left top-center top-center top-right"
+        "top-left center-left center-right top-right"
+        "bottom-left bottom-center bottom-right bottom-right"
+        "bottom-left bottom-center bottom-right bottom-right"
+        "bottom-left bottom-center bottom-right bottom-right"
+    ;
+    gap: 20px;
+}
+
+.grid-item {
+    overflow: hidden;
+}
+
+.grid-item.top-left {
+    background-color: hsl(31, 66%, 93%);
+    width: 100%;
+    height: 100%;
+    grid-area: top-left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item.top-left>.content {
+    font-size: 36px;
+    text-wrap: wrap;
+    white-space: wrap;
+    width: 50%;
+}
+
+.grid-item.top-center {
+    background-color: hsl(256, 67%, 59%);
+    width: 100%;
+    height: 100%;
+    grid-area: top-center;
+}
+
+.grid-item.top-center>.content {
+    color: hsl(0, 0%, 100%);
+}
+
+.grid-item.top-right {
+    background-color: hsl(254, 88%, 90%);
+    width: 100%;
+    height: 100%;
+    grid-area: top-right;
+}
+
+.grid-item.top-right>.content {
+    padding: 2.5% 5%;
+}
+
+.grid-item.top-right>.content .content-header {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+}
+
+.grid-item.bottom-left {
+    background-color: hsl(39, 100%, 71%);
+    width: 100%;
+    height: 100%;
+    grid-area: bottom-left;
+}
+
+.grid-item.center-left {
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+    height: 100%;
+    grid-area: center-left;
+}
+
+.grid-item.center-right {
+    background-color: hsl(39, 100%, 71%);
+    width: 100%;
+    height: 100%;
+    grid-area: center-right;
+}
+
+.grid-item.bottom-center {
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+    height: 100%;
+    grid-area: bottom-center;
+}
+
+.grid-item.bottom-right {
+    background-color: hsl(256, 67%, 59%);
+    width: 100%;
+    height: 100%;
+    grid-area: bottom-right;
+}
+
+.grid-item.bottom-right>.content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 2.5%;
+    font-size: 50px;
+    color: hsl(0, 0%, 100%);
+}
